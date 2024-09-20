@@ -7,6 +7,7 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
+@Inheritance(strategy = InheritanceType.JOINED)
 public abstract class Product {
     @Id
     @GeneratedValue
@@ -19,13 +20,4 @@ public abstract class Product {
     private double price;
     @Column(name = "quantity")
     private int quantity;
-
-    protected Product() {
-    }
-
-    protected Product(String name, String description, double price) {
-        this.name = name;
-        this.description = description;
-        this.price = price;
-    }
 }

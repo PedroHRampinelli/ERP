@@ -1,5 +1,6 @@
 package com.api.ERP.Controller;
 
+import com.api.ERP.Model.ActionFigureEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -29,7 +30,7 @@ public class ProductController {
     }
 
     @PostMapping("/create")
-    public ResponseEntity<Product> createProduct(@RequestBody Product product) {
+    public ResponseEntity<Product> createProduct(@RequestBody ActionFigureEntity product) {
         productService.createProduct(product);
         return new ResponseEntity<>(product, HttpStatus.CREATED);
     }
