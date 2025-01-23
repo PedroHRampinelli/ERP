@@ -18,7 +18,7 @@ public class ProductService {
     ProductRepository productRepository;
 
     public void createProduct(ActionFigureEntity product) {
-        productRepository.save(product);
+        ActionFigureEntity newACtionFigure = productRepository.save(product);
     }
 
     public Optional<Product> findById(Long id){

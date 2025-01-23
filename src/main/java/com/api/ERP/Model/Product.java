@@ -4,14 +4,10 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
-@Entity
+@MappedSuperclass
 @Getter
 @Setter
-@Inheritance(strategy = InheritanceType.JOINED)
 public abstract class Product {
-    @Id
-    @GeneratedValue
-    private Long id;
     @Column(name = "name")
     private String name;
     @Column(name = "description")

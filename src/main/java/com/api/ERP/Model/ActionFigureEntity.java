@@ -23,8 +23,6 @@ public class ActionFigureEntity extends Product {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     @Column
-    private Long productId;
-    @Column
     private ActionFigureType type;
     @Column
     private float height;
@@ -37,7 +35,6 @@ public class ActionFigureEntity extends Product {
     public ActionFigureEntity(Long id, ActionFigureType type, float height, float width, float length) {
         super();
         this.id = id;
-        this.productId = super.getId();
         this.type = type;
         this.height = height;
         this.width = width;
